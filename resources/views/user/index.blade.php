@@ -103,7 +103,7 @@
                                                 </div>
                                                 <div class="tp-slider-video d-flex align-items-center">
                                                     <a class="popup-video video-animation"
-                                                        href="https://www.youtube.com/watch?v=K527oNxtO7o"><i
+                                                    href="/assets/vidio/profil.mp4"><i
                                                             class="fa-sharp fa-light fa-play"></i></a>
                                                     <span>MELIHAT PROFIL <br> KAMI</span>
                                                 </div>
@@ -148,7 +148,7 @@
                                                 </div>
                                                 <div class="tp-slider-video d-flex align-items-center">
                                                     <a class="popup-video video-animation"
-                                                        href="https://www.youtube.com/watch?v=K527oNxtO7o"><i
+                                                    href="/assets/vidio/profil.mp4"><i
                                                             class="fa-sharp fa-light fa-play"></i></a>
                                                     <span>MELIHAT PROFIL <br> KAMI</span>
                                                 </div>

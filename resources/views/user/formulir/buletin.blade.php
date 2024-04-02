@@ -205,7 +205,7 @@
                         success: function(response) {
                             toastr.success('Data berhasil ditambahkan.');
                             clear();
-                            location.reload
+                            location.reload();
                         },
                         error: function(xhr, status, error) {
                             if (xhr.status == 400) {

@@ -598,22 +598,22 @@
                                     <div class="tp-event-content-wrap">
                                         <div class="tp-event-content">
                                             <div class="tp-event-meta">
-                                                <span><i class="fa-regular fa-clock"></i>08:00 am</span>
-                                                <div class="row ">
-                                                    <div class="col-md-2 text-right">
-                                                        Penerbit:
-                                                    </div>
-                                                    <div class="col-md-10 text-left">
-                                                        {{ $pariban['author'] }}
-                                                    </div>
-                                                </div>
+                                                <span><i class="fa-regular fa-clock"></i> {{ $pariban['created_at']->format('H:i') }} </span>
+                                                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ $pariban['created_at']->format('d-m-Y') }} </span>
 
                                                 {{-- <span><i class="fa-light fa-location-dot"></i><a
                                             href="https://www.google.com/maps/@23.8202709,90.2804172,9z?entry=ttu"
                                             target="_blank">Watsica 24, USA</a></span> --}}
                                             </div>
-                                            <h4 class="tp-event-title-sm"><a
-                                                    href="event-details.html">{{ $pariban['judul'] }}</a></h4>
+                                            <h4 class="tp-event-title-sm">
+                                                <a href="event-details.html">{{ $pariban['judul'] }}</a>
+                                            </h4>
+
+                                            <p style="margin: 0;">Penerbit : {{ $pariban['author'] }}</p>
+                                            <p style="margin: 0;">Sekolah : {{ $pariban['sekolah'] }}</p>
+                                            <p style="margin: 0;">Kelas : {{ $pariban['kelas'] }}</p>
+
+
                                         </div>
                                         <div class="tp-event-link">
                                             <a href="/pariban/show/{{ $pariban['id'] }}">LIHAT</a>
@@ -674,8 +674,8 @@
                                     <div class="tp-event-content-wrap">
                                         <div class="tp-event-content">
                                             <div class="tp-event-meta">
-                                                <span><i class="fa-regular fa-clock"></i>08:00 am</span>
-
+                                                <span><i class="fa-regular fa-clock"></i> {{ $pariban['created_at']->format('H:i') }} </span>
+                                                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ $pariban['created_at']->format('d-m-Y') }} </span>
 
                                                 {{-- <span><i class="fa-light fa-location-dot"></i><a
                                             href="https://www.google.com/maps/@23.8202709,90.2804172,9z?entry=ttu"
@@ -749,22 +749,22 @@
                                     <div class="tp-event-content-wrap">
                                         <div class="tp-event-content">
                                             <div class="tp-event-meta">
-                                                <span><i class="fa-regular fa-clock"></i>08:00 am</span>
-                                                <div class="row ">
-                                                    <div class="col-md-2 text-right">
-                                                        Penerbit:
-                                                    </div>
-                                                    <div class="col-md-10 text-left">
-                                                        {{ $pariban['author'] }}
-                                                    </div>
-                                                </div>
+                                                <span><i class="fa-regular fa-clock"></i> {{ $pariban['created_at']->format('H:i') }} </span>
+                                                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ $pariban['created_at']->format('d-m-Y') }} </span>
 
                                                 {{-- <span><i class="fa-light fa-location-dot"></i><a
                                             href="https://www.google.com/maps/@23.8202709,90.2804172,9z?entry=ttu"
                                             target="_blank">Watsica 24, USA</a></span> --}}
                                             </div>
-                                            <h4 class="tp-event-title-sm"><a
-                                                    href="event-details.html">{{ $pariban['judul'] }}</a></h4>
+                                            <h4 class="tp-event-title-sm">
+                                                <a href="event-details.html">{{ $pariban['judul'] }}</a>
+                                            </h4>
+
+                                            <p style="margin: 0;">Penerbit : {{ $pariban['author'] }}</p>
+                                            <p style="margin: 0;">Sekolah : {{ $pariban['sekolah'] }}</p>
+                                            <p style="margin: 0;">Kelas : {{ $pariban['kelas'] }}</p>
+
+
                                         </div>
                                         <div class="tp-event-link">
                                             <a href="/pariban/show/{{ $pariban['id'] }}">LIHAT</a>
@@ -825,22 +825,22 @@
                                     <div class="tp-event-content-wrap">
                                         <div class="tp-event-content">
                                             <div class="tp-event-meta">
-                                                <span><i class="fa-regular fa-clock"></i>08:00 am</span>
-                                                <div class="row ">
-                                                    <div class="col-md-2 text-right">
-                                                        Penerbit:
-                                                    </div>
-                                                    <div class="col-md-10 text-left">
-                                                        {{ $pariban['author'] }}
-                                                    </div>
-                                                </div>
+                                                <span><i class="fa-regular fa-clock"></i> {{ $pariban['created_at']->format('H:i') }} </span>
+                                                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ $pariban['created_at']->format('d-m-Y') }} </span>
 
                                                 {{-- <span><i class="fa-light fa-location-dot"></i><a
                                             href="https://www.google.com/maps/@23.8202709,90.2804172,9z?entry=ttu"
                                             target="_blank">Watsica 24, USA</a></span> --}}
                                             </div>
-                                            <h4 class="tp-event-title-sm"><a
-                                                    href="event-details.html">{{ $pariban['judul'] }}</a></h4>
+                                            <h4 class="tp-event-title-sm">
+                                                <a href="event-details.html">{{ $pariban['judul'] }}</a>
+                                            </h4>
+
+                                            <p style="margin: 0;">Penerbit : {{ $pariban['author'] }}</p>
+                                            <p style="margin: 0;">Sekolah : {{ $pariban['sekolah'] }}</p>
+                                            <p style="margin: 0;">Kelas : {{ $pariban['kelas'] }}</p>
+
+
                                         </div>
                                         <div class="tp-event-link">
                                             <a href="/pariban/show/{{ $pariban['id'] }}">LIHAT</a>

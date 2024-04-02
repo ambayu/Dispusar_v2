@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -16,9 +18,27 @@ class DashboardController extends Controller
 
         if ($response->successful()) {
             $data = $response->json();
+            if (!empty($data['pariban_puisi'])) {
+                $data['pariban_puisi'][0]['updated_at'] = Carbon::parse($data['pariban_puisi'][0]['updated_at']);
+                $data['pariban_puisi'][0]['created_at'] = Carbon::parse($data['pariban_puisi'][0]['created_at']);
+            }
+
+            if (!empty($data['pariban_cerpen'])) {
+                $data['pariban_cerpen'][0]['updated_at'] = Carbon::parse($data['pariban_cerpen'][0]['updated_at']);
+                $data['pariban_cerpen'][0]['created_at'] = Carbon::parse($data['pariban_cerpen'][0]['created_at']);
+            }
+
+            if (!empty($data['pariban_lukisan'])) {
+                $data['pariban_lukisan'][0]['updated_at'] = Carbon::parse($data['pariban_lukisan'][0]['updated_at']);
+                $data['pariban_lukisan'][0]['created_at'] = Carbon::parse($data['pariban_lukisan'][0]['created_at']);
+            }
+
+            if (!empty($data['pariban_vidio'])) {
+                $data['pariban_vidio'][0]['updated_at'] = Carbon::parse($data['pariban_vidio'][0]['updated_at']);
+                $data['pariban_vidio'][0]['created_at'] = Carbon::parse($data['pariban_vidio'][0]['created_at']);
+            }
         } else {
             $data = 0;
-
         }
 
         $chunks_pp = array_chunk($data['pariban_puisi'], 3);

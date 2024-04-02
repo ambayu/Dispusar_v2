@@ -11,7 +11,7 @@ class DashboardController extends Controller
     {
         $serverConfig = config('servers');
         $dispusarEndpoint = $serverConfig['dispusar'] . '/api/formulir';
-        return $dispusarEndpoint;
+
         $response = Http::get($dispusarEndpoint);
 
         if ($response->successful()) {

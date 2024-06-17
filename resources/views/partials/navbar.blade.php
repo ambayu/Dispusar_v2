@@ -19,6 +19,7 @@
                                 <a href="#">FITUR</a>
                                 <ul class="tp-submenu submenu">
                                     <li><a href="/buletin">BULETIN</a></li>
+                                    <li><a href="/laporan">LAPORAN</a></li>
                                     <li><a href="#">PARIBAN</a>
                                         <ul class="tp-submenu submenu">
                                             <li><a href="/pariban/category/puisi">PUISI</a></li>

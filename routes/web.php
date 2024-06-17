@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\BuletinController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ParibanController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BuletinController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\ParibanController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[DashboardController::class,'index'])->name('dashboard.index');
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::get('/form_buletin', function () {
     return view('user.formulir.buletin');
 });
@@ -24,7 +25,7 @@ Route::get('/form_pariban', function () {
     return view('user.formulir.pariban');
 });
 
-Route::fallback(function(){
+Route::fallback(function () {
     return view('partials.404');
 });
 
@@ -32,10 +33,10 @@ Route::get('/error', function () {
     return view('partials.404');
 })->name('error');
 
-Route::get('/buletin',[BuletinController::class,'index'])->name('buletin.index');
-Route::get('/buletin/show/{id}',[BuletinController::class,'show'])->name('buletin.show');
+Route::get('/buletin', [BuletinController::class, 'index'])->name('buletin.index');
+Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
+Route::get('/buletin/show/{id}', [BuletinController::class, 'show'])->name('buletin.show');
 
 
-Route::get('/pariban/category/{id}',[ParibanController::class,'index'])->name('pariban');
-Route::get('/pariban/show/{id}',[ParibanController::class,'show'])->name('pariban.show');
-
+Route::get('/pariban/category/{id}', [ParibanController::class, 'index'])->name('pariban');
+Route::get('/pariban/show/{id}', [ParibanController::class, 'show'])->name('pariban.show');

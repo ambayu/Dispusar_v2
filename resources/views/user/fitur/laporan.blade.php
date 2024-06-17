@@ -1,4 +1,4 @@
-@extends('layouts.app', ['tittle' => ' Buletin'])
+@extends('layouts.app', ['tittle' => ' laporan'])
 <?php $serverConfig = config('servers'); ?>
 
 @section('header')
@@ -10,11 +10,11 @@
             <div class="row">
                 <div class="col-xxl-12">
                     <div class="breadcrumb__content z-index text-center">
-                        <h3 class="breadcrumb__title"> BULETIN</h3>
+                        <h3 class="breadcrumb__title"> LAPORAN</h3>
                         <div class="breadcrumb__list">
                             <span><a href="index.html">Home</a></span>
                             <span class="dvdr"><i class="fa fa-angle-right"></i></span>
-                            <span>buletin</span>
+                            <span>laporan</span>
                         </div>
                     </div>
                 </div>

@@ -124,14 +124,14 @@
                                         <div class="col-xl-12">
                                             <div class="error-message text-danger" id="deskripsi-error"></div>
                                             <div class="tp-contact-2-input p-relative">
-                                                <textarea id="deskripsiadd" name="deskripsiadd" placeholder="Tulis deskripsi dari pariban yang disubmit"></textarea>
+                                                <textarea id="deskripsiadd" name="deskripsiadd" placeholder="Tulis deskripsi dari karya siswa yang disubmit"></textarea>
                                                 <span class="icon-1"><i class="fa-light fa-pen"></i></span>
                                             </div>
                                         </div>
                                         <div class="error-message text-danger" id="file-error"></div>
 
                                         <div class="col-xl-12">
-                                            <div>Upload File Pdf Pariban
+                                            <div>Upload File Pdf Pariban (Pengembangan Literasi Bagi Siswa SMP Medan )
                                             </div>
                                             <div class="tp-contact-2-input p-relative">
                                                 <input type="file" id="fileadd" name="fileadd" style="width:100%;">

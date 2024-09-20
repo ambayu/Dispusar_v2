@@ -633,7 +633,7 @@
                                             object-fit: cover;
                                             object-position: center;
                                         ">
-                                    <a href="#"><img class="w-100"
+                                    <a href="/pariban/show/{{ $pariban['id'] }}"><img class="w-100"
                                             src="{{ $serverConfig['dispusar'] . '/assets/img/pariban/foto/' . $pariban['foto'] }}"
                                             alt=""></a>
                                     <span>

@@ -114,6 +114,8 @@
                                                   <option value="2">Cerpen</option>
                                                   <option value="3">Lukisan</option>
                                                   <option value="4">Vidio</option>
+                                                  <option value="5">Pantun</option>
+                                                  <option value="6">Kata-Kata Motivasi</option>
                                                </select>
 
                                             </div>

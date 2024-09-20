@@ -19,12 +19,21 @@
                                 <a href="#">FITUR</a>
                                 <ul class="tp-submenu submenu">
                                     <li><a href="/buletin">BULETIN</a></li>
-                                    <li><a href="#">PARIBAN</a>
+                                    <li><a style="display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            text-decoration: none;"
+                                            href="#">PARIBAN<i style="margin-left: 8px;"
+                                                class="fa-regular fa-arrow-right-long "></i> </a>
+
                                         <ul class="tp-submenu submenu">
+                                            <li><a href="/pariban/category/all">SEMUA</a></li>
                                             <li><a href="/pariban/category/puisi">PUISI</a></li>
                                             <li><a href="/pariban/category/cerpen">CERPEN</a></li>
                                             <li><a href="/pariban/category/lukisan">LUKISAN</a></li>
                                             <li><a href="/pariban/category/vidio">VIDIO PEMBELAJARAN</a></li>
+                                            <li><a href="/pariban/category/pantun">PANTUN</a></li>
+                                            <li><a href="/pariban/category/motivasi">KATA - KATA MOTIVASI</a></li>
 
                                         </ul>
                                     </li>

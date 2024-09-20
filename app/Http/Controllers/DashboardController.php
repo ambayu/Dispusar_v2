@@ -15,7 +15,6 @@ class DashboardController extends Controller
         $dispusarEndpoint = $serverConfig['dispusar'] . '/api/formulir';
 
         $response = Http::get($dispusarEndpoint);
-
         if ($response->successful()) {
             $data = $response->json();
             if (!empty($data['pariban_puisi'])) {
@@ -45,6 +44,8 @@ class DashboardController extends Controller
         $chunks_pc = array_chunk($data['pariban_cerpen'], 3);
         $chunks_pl = array_chunk($data['pariban_lukisan'], 3);
         $chunks_pv = array_chunk($data['pariban_vidio'], 3);
+        $combined_data = array_merge($data['pariban_puisi'], $data['pariban_cerpen'], $data['pariban_lukisan'], $data['pariban_vidio']);
+        // return $combined_data;
 
         return view('user.index', [
             'data_buletin' => $data['data'],
@@ -54,6 +55,7 @@ class DashboardController extends Controller
             'chunks_pc' => $chunks_pc,
             'chunks_pl' => $chunks_pl,
             'chunks_pv' => $chunks_pv,
+            'all_pariban' => $combined_data,
         ]);
     }
 }

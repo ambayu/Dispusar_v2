@@ -93,7 +93,7 @@
                                         src="{{ $serverConfig['dispusar'] . '/assets/img/pariban/foto/' . $pariban['foto'] }}"
                                         alt=""></a>
                                 <span>
-                                    <img src="assets/img/avata/avata-3.png" alt="">
+                                    <img src="{{ asset('assets/img/avata/avata-3.png') }}" alt="">
                                     <i>By: {{ $pariban['author'] }}</i>
                                 </span>
                             </div>

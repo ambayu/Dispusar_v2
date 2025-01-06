@@ -14,7 +14,7 @@
 
                         <div class="breadcrumb__list">
 
-                            <span >
+                            <span>
                                 Pengembangan Literasi Bagi Siswa SMP Medan
 
                             </span>
@@ -81,7 +81,7 @@
                         </div>
                     </div> --}}
 
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30" >
                         <div class="tp-blog__item">
                             <div class="tp-blog__thumb p-relative fix"
                                 style="width: 100%;
@@ -142,19 +142,28 @@
                         </div>
                     </div>
                 @endforeach
+                <div class="basic-pagination " style="margin-top: 100px">
+                    <!-- Display pagination links -->
+                    <nav>
+                        <ul>
+                            @foreach ($data_pariban['links'] as $link)
+                                <li>
+                                    @php
 
-                <!-- Display pagination links -->
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-
-                        @foreach ($data_pariban['links'] as $link)
-                            <li class="page-item {{ $link['active'] ? 'active' : '' }}">
-                                <a class="page-link"
-                                    href="/pariban/category/{{ $title }}?current_page={{ $loop->iteration - 1 }}">{!! $link['label'] !!}</a>
-                            </li>
-                        @endforeach
+                                    if ($link['label'] == '&laquo; Sebelumnya') {
+                                        echo '<a href="/pariban/category/' . $title . '?current_page=' . ($loop->iteration - 1) . '"><i class="fa-regular fa-angles-left"></i></a>';
+                                    } elseif ($link['label'] == 'Selanjutnya &raquo;') {
+                                        echo '<a href="/pariban/category/' . $title . '?current_page=' . ($loop->iteration - 1) . '"><i class="fa-regular fa-angles-right"></i></a>';
+                                    } else {
+                                        echo '<a href="/pariban/category/' . $title . '?current_page=' . ($loop->iteration - 1) . '"><span class="' . ($link['active'] ? "current" : "") . '">' . $link['label'] . '</span></a>';
+                                    }
+                                @endphp
+                          </li>
+                            @endforeach
+                        </ul>
+                    </nav>
+                </div>
 
             </div>
         </div>
-    </div>
-@endsection
+    @endsection

@@ -56,6 +56,7 @@ class ParibanController extends Controller
             $data_pariban = [];
             $pagination = [];
         }
+        // return $data_pariban;
         return view('user.fitur.pariban', [
             'data_pariban' => $data_pariban,
             'link' => 'pariban_puisi',

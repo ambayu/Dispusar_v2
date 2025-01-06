@@ -53,15 +53,30 @@
                     </div>
                 @endforeach
 
-                <!-- Display pagination links -->
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
 
-                        @foreach ($data_buletin['links'] as $link)
-                            <li class="page-item {{ $link['active'] ? 'active' : '' }}">
-                                <a class="page-link" href="/buletin?current_page={{ $loop->iteration -1 }}">{!! $link['label'] !!}</a>
-                            </li>
-                        @endforeach
+
+
+                        <div class="basic-pagination " style="margin-top: 100px">
+                            <!-- Display pagination links -->
+                            <nav>
+                                <ul >
+                                    @foreach ($data_buletin['links'] as $link)
+                                        <li>
+                                            @php
+
+                                            if ($link['label'] == '&laquo; Sebelumnya') {
+                                                echo '<a href="/buletin/category/?current_page=' . ($loop->iteration - 1) . '"><i class="fa-regular fa-angles-left"></i></a>';
+                                            } elseif ($link['label'] == 'Selanjutnya &raquo;') {
+                                                echo '<a href="/buletin/category/?current_page=' . ($loop->iteration - 1) . '"><i class="fa-regular fa-angles-right"></i></a>';
+                                            } else {
+                                                echo '<a href="/buletin/category/?current_page=' . ($loop->iteration - 1) . '"><span class="' . ($link['active'] ? "current" : "") . '">' . $link['label'] . '</span></a>';
+                                            }
+                                        @endphp
+                                  </li>
+                                    @endforeach
+                                </ul>
+                            </nav>
+                        </div>
 
             </div>
         </div>
